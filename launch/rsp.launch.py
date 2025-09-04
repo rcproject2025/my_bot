@@ -32,12 +32,14 @@ def generate_launch_description():
     )
 
     # RViz2
-    rviz = Node(
-        package='rviz2',
-        executable='rviz2',
-        name='rviz2',
-        output='screen',
-    )
+    rviz =Node(
+    package='rviz2',
+    executable='rviz2',
+    name='rviz2',
+    output='screen',
+    parameters=[params]
+)
+
 
     return LaunchDescription([
         DeclareLaunchArgument(
